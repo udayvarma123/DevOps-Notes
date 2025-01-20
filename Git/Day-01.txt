@@ -1,0 +1,178 @@
+ 1007  mkdir demo
+ 1008  ls
+ 1009  cd  demo
+ 1010  pwd
+ 1011  ls -ltr
+ 1012  vi testfile
+ 1013  ls -ltr
+ 1014  date
+ 1015  vi testfile
+ 1016  ls -ltr
+ 1017  cat testfile
+ 1018  rm testfile
+ 1019  ls -ltr
+ 1020  vi 1.txt
+ 1021  ls -ltr
+ 1022  git status
+ 1023  ls -ltr
+ 1024  yum install git
+ 1025  git --version
+ 1026  ls -ltr
+ 1027  git init
+ 1028  ls -ltr
+ 1029  ls -ltra
+ 1030  rm -rf .git
+ 1031  git status
+ 1032  git init
+ 1033  cd ..
+ 1034  ls
+ 1035  mkdir test
+ 1036  cd  test
+ 1037  git status
+ 1038  ls -ltra
+ 1039  git init
+ 1040  ls -ltra
+ 1041  git status
+ 1042  cd ..
+ 1043  ls
+ 1044  rm -rf tets
+ 1045  rm -rf test
+ 1046  cd demo
+ 1047  ls -ltra
+ 1048  git status
+ 1049  git add 1.txt
+ 1050  git status
+ 1051  vi 2.txt
+ 1052  git status
+ 1053  vi 2.txt
+ 1054  git status
+ 1055  vi 1.txt
+ 1056  git status
+ 1057  git show
+ 1058  ls -ltr
+ 1059  git status
+ 1060  ls -ltr
+ 1061  git status
+ 1062  pwd
+ 1063  git add 1.txt 2.txt
+ 1064  git status
+ 1065  git commit -m "first commit" .
+ 1066  git status
+ 1067  ls -ltr
+ 1068  #git init
+ 1069  #git add .
+ 1070  #git commit -m " " .
+ 1071  ls -ltr
+ 1072  ls -ltra
+ 1073  cd ..
+ 1074  ls
+ 1075  cd  demo
+ 1076  #git init
+ 1077  #git add .
+ 1078  #git commit -m " " .
+ 1079  ls -ltr
+ 1080  git status
+ 1081  ls -ltr
+ 1082  ##repository == repo = collection of file and dir
+ 1083  ls -ltr
+ 1084  #local repo
+ 1085  ls -ltr
+ 1086  git status
+ 1087  git log
+ 1088  git show 8300de
+ 1089  git log
+ 1090  #git show 8300de
+ 1091  history | grep email
+ 1092  #git commit -m " " .
+ 1093  #git config --global user.email
+ 1094  #git config --global user.name <>
+ 1095  #git config --global user.email <>
+ 1096  #git config --global--unset user.email
+ 1097  git config --global--unset user.email
+ 1098  git config --global --unset user.email
+ 1099  git config --global --unset user.name
+ 1100  git config --system --unset user.name
+ 1101  git config --system --unset user.email
+ 1102  vi 3.txt
+ 1103  git status
+ 1104  git add 3.txt
+ 1105  git status
+ 1106  git commit -m "second commit" 3.txt
+ 1107  git config --global user.email  "globaluser@gmai.com"
+ 1108  git config --global user.name  "globaluser"
+ 1109  git commit -m "second commit" 3.txt
+ 1110  #git config --global --unset user.name
+ 1111  #git config --global --unset user.email
+ 1112  git log
+ 1113  git show 8300de7
+ 1114  git show 4fb051
+ 1115  git log
+ 1116  git diff 8300de 4fb051
+ 1117  git diff  4fb051 8300de
+ 1118  #git init
+ 1119  #git add .
+ 1120  #git commit -m " " .
+ 1121  #git config --global user.email  "globaluser@gmai.com"
+ 1122  #git config --global user.name  "globaluser"
+ 1123  #git config --global --unset user.name
+ 1124  #git config --global --unset user.email
+ 1125  #git log
+ 1126  #git diff 8300de 4fb051
+ 1127  #git show 8300de7
+ 1128  #git status
+ 1129  git status
+ 1130  git branch
+ 1131  ls -ltr
+ 1132  git branch dev
+ 1133  git branch
+ 1134  ls -ltr
+ 1135  git chekout dev
+ 1136  git checkout dev
+ 1137  git branch
+ 1138  ls -ltr
+ 1139  git branch
+ 1140  vi devfile
+ 1141  git add devfile
+ 1142  git status
+ 1143  git commit -m "dev branch commit" devfile
+ 1144  git status
+ 1145  ls -ltr
+ 1146  git branch
+ 1147  git checkout master
+ 1148  git branch
+ 1149  ls -ltr
+ 1150  git checkout dev
+ 1151  git branch
+ 1152  ls -ltr
+ 1153  git branch test
+ 1154  git branch
+ 1155  git chekout test
+ 1156  git checkout test
+ 1157  ls -ltr
+ 1158  #git branch --> to list the branches
+ 1159  #git chekcout <> --> to create the branch
+ 1160  #git chekcout <> --> to switch the branch
+ 1161  #git branch <> --> to create the branch
+ 1162  #git branch --> to list the branches
+ 1163  #git branch <> --> to create the branch
+ 1164  #git branch --> to list the branches
+ 1165  #git chekcout <> --> to switch the branch
+ 1166  git checkout -b stage
+ 1167  git branch
+ 1168  #git checkout -b <> == git branch <>  + git chekcout <>
+ 1169  git branch -D dev
+ 1170  git branch
+ 1171  ls -ltr
+ 1172  git branch -D stage
+ 1173  git branch
+ 1174  git branch -D test
+ 1175  git branch
+ 1176  git chekcout master
+ 1177  git checkout master
+ 1178  git branch
+ 1179  git branch -D stage
+ 1180  git branch
+ 1181  git log
+ 1182  ls -ltr
+ 1183  git branch
+ 1184  git push https://github.com/salilkul/demo-sk.git master

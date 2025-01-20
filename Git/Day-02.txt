@@ -1,0 +1,90 @@
+ 1001  git clone https://github.com/salilkul/demo-gui.git
+ 1002  ls -ltr
+ 1003  cd demo-gui
+ 1004  ls -ltr
+ 1005  git branch
+ 1006  git chekcout devbranch
+ 1007  git checkout devbranch
+ 1008  git branch
+ 1009  cd ..
+ 1010  ls -ltr
+ 1011  rm -rf demo-gui/
+ 1012  ls -ltr
+ 1013  git clone https://github.com/salilkul/demo-gui.git
+ 1014  ls -ltr
+ 1015  rm -rf demo-gui/
+ 1016  ls -ltr
+ 1017  git clone -b devbranch https://github.com/salilkul/demo-gui.git
+ 1018  cd  demo-gui/
+ 1019  git branch
+ 1020  cd ..
+ 1021  ls -ltre
+ 1022  ls -ltr
+ 1023  #git clone -b devbranch https://github.com/salilkul/demo-gui.git
+ 1024  #git clone https://github.com/salilkul/demo-gui.git
+ 1025  ls -ltr
+ 1026  git clone https://github.com/salilkul/demo-gui.git
+ 1027  cd demo-gui/
+ 1028  ls -ltr
+ 1029  git branch
+ 1030  git checkout master
+ 1031  git checkout main
+ 1032  git branch
+ 1033  ls -ltr
+ 1034  cat anotherguifile
+ 1035  git remote -v
+ 1036  git pull
+ 1037  cat anotherguifile
+ 1038  git branch
+ 1039  cat githubfile
+ 1040  git fetch origin main
+ 1041  cat githubfile
+ 1042  git merge origin/main
+ 1043  cat githubfile
+ 1044  #git pulll origin main == git fetch origin main + git merge origin/main
+ 1045  #git pull origin main == git fetch origin main + git merge origin/main
+ 1046  #push , clone , pull, fetch , stash , merge , rebase
+ 1047  #push , clone , pull, fetch , stash , merge , rebase , fork
+ 1048  cd ..
+ 1049  ls -ltr
+ 1050  rm -rf demo
+ 1051  rm -rf demo-gui/
+ 1052  ls -ltr
+ 1053  mkdir demo
+ 1054  cd demo
+ 1055  git init
+ 1056  vi demofile.txt
+ 1057  git add .
+ 1058  git commit -m "first commit" .
+ 1059  git branch
+ 1060  ls -ltr
+ 1061  git branch dev1
+ 1062  git branch dev2
+ 1063  git branch
+ 1064  git checkout dev1
+ 1065  vi demofile.txt
+ 1066  git add .
+ 1067  git commit -m "dev1 changes" .
+ 1068  git checkout master
+ 1069  git merge dev1
+ 1070  git checkout dev1
+ 1071  git checkout dev2
+ 1072  ls -ltr
+ 1073  vi demofile.txt
+ 1074  git add .
+ 1075  git commit -m "dev2 changes" .
+ 1076  git chekcout master
+ 1077  git checkout master
+ 1078  git branch
+ 1079  git merge dev2
+ 1080  git mergetool
+ 1081  ls -ltr
+ 1082  cat demofile.txt.orig
+ 1083  cat demofile.txt
+ 1084  rm demofile.txt.orig
+ 1085  git status
+ 1086  git add demofile.txt
+ 1087  git commit -m "final file"
+ 1088  git status
+ 1089  ls -ltr
+ 1090  cat demofile.txt
