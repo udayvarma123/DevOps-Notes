@@ -1,0 +1,178 @@
+ 1005  vi Dockerfile
+ 1006  docker images
+ 1007  docker image build -t myimg:8.0 .
+ 1008  docker container run -it --rm --name mycont myimg:8.0 bash
+ 1009  vi Dockerfile
+ 1010  docker image build -t myimg:9.0 .
+ 1011  docker container run -it --rm --name mycont myimg:9.0 bash
+ 1012  vi Dockerfile
+ 1013  docker image build -t myimg:10.0 .
+ 1014  docker container run -it --name mycont myimg:10.0
+ 1015  vi Dockerfile
+ 1016  docker image build -t myimg:10.0 .
+ 1017  docker container rm -f mycont
+ 1018  docker container run -it --name mycont myimg:10.0
+ 1019  docker ps -a
+ 1020  cat Dockerfile
+ 1021  docker container run -it --name mycont myimg:9.0
+ 1022  docker container run -it --name mycont1 myimg:9.0
+ 1023  docker ps -a
+ 1024  cat Dockerfile
+ 1025  vi Dockerfile
+ 1026  docker image build -t myimg:11.0 .
+ 1027  docker container run -it --name mycont2 myimg:11.0
+ 1028  cat Dockerfile
+ 1029  docker ps -a
+ 1030  docker history ubuntu:14.04
+ 1031  vi Dockerfile
+ 1032  docker image build -t myimg:11.0 .
+ 1033  l
+ 1034  docker container run -it --name mycont3 myimg:11.0
+ 1035  docker ps
+ 1036  docker ps -a
+ 1037  docker container run -it --name mycont3 myimg:11.0 uptime
+ 1038  docker container run -it --name mycont4 myimg:11.0 uptime
+ 1039  docker ps -a
+ 1040  docker container run -it --name mycont5 myimg:11.0 sudarshan
+ 1041  vi Dockerfile
+ 1042  docker container run -it --name mycont5 myimg:11.0 hi uday
+ 1043  docker container run -it --name mycont6 myimg:11.0 hi uday
+ 1044  docker container run -it --name mycont6 myimg:11.0 whoami
+ 1045  docker container run -it --name mycont7 myimg:11.0 whoami
+ 1046  docker container run -it --name mycont8 myimg:11.0
+ 1047  cat Dockerfile
+ 1048  docker ps -a
+ 1049  docker container run -it --name mycont9 myimg:11.0 bash
+ 1050  vi Dockerfile
+ 1051  vi abc.sh
+ 1052  ls
+ 1053  chmod +x abc.sh
+ 1054  vi Dockerfile
+ 1055  docker image build -t myimg:12.0 .
+ 1056  bash abc.sh
+ 1057  docker container run -it --name mycont9 myimg:12.0
+ 1058  docker container run -it --name mycont10 myimg:12.0
+ 1059  cat Dockerfile
+ 1060  vi 123.sh
+ 1061  chmod +x 123.sh
+ 1062  bash 123.sh
+ 1063  docker container run -it --name mycont11 myimg:12.0 123.sh
+ 1064  vi Dockerfile
+ 1065  docker image build -t myimg:13.0 .
+ 1066  docker container run -it --name mycont12 myimg:13.0
+ 1067  cat Dockerfile
+ 1068  cat abc.sh
+ 1069  docker container run -it --name mycont13 myimg:13.0 123.sh
+ 1070  cat 123.sh
+ 1071  cat abc.sh
+ 1072  vi Dockerfile
+ 1073  docker image build -t myimg:14.0 .
+ 1074  docker container run -it --name mycont14 myimg:14.0 abc.sh
+ 1075  docker container run -it --name mycont14 myimg:14.0 123.sh
+ 1076  docker container run -it --name mycont15 myimg:14.0 123.sh
+ 1077  cat Dockerfile
+ 1078  vi Dockerfile
+ 1079  docker image build -t myimg:15.0 .
+ 1080  docker container run -it --name mycont16 myimg:15.0
+ 1081  cat Dockerfile
+ 1082  docker container run -it --name mycont17 myimg:15.0 abc.sh
+ 1083  docker container prune
+ 1084  docker ps -a
+ 1085  docker images
+ 1086  vi Dockerfile
+ 1087  docker image build -t myimg:15.0 .
+ 1088  vi Dockerfile
+ 1089  docker images
+ 1090  docker image prune
+ 1091  docker images
+ 1092  cat Dockerfile
+ 1093  docker images
+ 1094  #docker image push myimg:15.0
+ 1095  docker image push myimg:15.0
+ 1096  docker image tag myimg:15.0 salilkul87/ myimg:15.0
+ 1097  docker image tag myimg:15.0 salilkul87/myimg:15.0
+ 1098  docker images
+ 1099  docker image push salilkul87/myimg:15.0
+ 1100  docker image rm salilkul87/myimg:15.0
+ 1101  docker image rm myimg:15.0
+ 1102  docker image ls
+ 1103  docker image pull salilkul87/myimg:15.0
+ 1104  docker image ls
+ 1105  docker images
+ 1106  docker image rm -f  $(docker image ls -aq)
+ 1107  l
+ 1108  docker images
+ 1109  #docker image rm -f  $(docker image ls -aq)
+ 1110  docker container run -d --name mycont nginx
+ 1111  docker ps
+ 1112  docker container exec -it mycont bash
+ 1113  docker ps
+ 1114  docker container run -d --name newcont nginx
+ 1115  docker ps
+ 1116  docker container exec -it newcont bash
+ 1117  docker ps
+ 1118  docker container rm -f mycont
+ 1119  docker ps
+ 1120  docker ps -a
+ 1121  #docker container run -d --name mycont -v  nginx
+ 1122  docker volume prune
+ 1123  docker container run -d --name mycont -v newvol:/tmp  nginx
+ 1124  docker volume ls
+ 1125  cd /var/lib/docker/
+ 1126  ls
+ 1127  cd volumes/
+ 1128  ls
+ 1129  cd newvol/
+ 1130  ls
+ 1131  cd _data/
+ 1132  ls
+ 1133  pwd
+ 1134  touch 123
+ 1135  docker container exec -it mycont bash
+ 1136  ls
+ 1137  docker container rm -f mycont
+ 1138  docker ps -a
+ 1139  ls
+ 1140  #docker container run -d --name mycont -v newvol:/tmp  nginx
+ 1141  cd
+ 1142  #docker container run -d --name cont1 -v pushpa2:/tmp  nginx
+ 1143  docker volume ls
+ 1144  docker container run -d --name cont1 -v pushpa2:/tmp  nginx
+ 1145  docker volume ls
+ 1146  cd /var/lib/docker/volumes/
+ 1147  ls
+ 1148  docker container exec -it cont1 bash
+ 1149  cd pushpa2/_data/
+ 1150  ls
+ 1151  echo "this is the base machine file" > basefile
+ 1152  docker container exec -it cont1 bash
+ 1153  pwd
+ 1154  df -h
+ 1155  cd
+ 1156  docker container run -d --name cont2 -v /mnt/pushpa2:/tmp  nginx
+ 1157  cd /mnt/pushpa2/
+ 1158  ls -ltr /mnt/pushpa2/
+ 1159  ls -ld /mnt/pushpa2/
+ 1160  date
+ 1161  ls
+ 1162  touch abcdef
+ 1163  docker container exec -it cont2 bash
+ 1164  docker ps
+ 1165  #docker container prune
+ 1166  #docker image prune
+ 1167  docker system prune
+ 1168  cd
+ 1169  docker ps
+ 1170  cd /var/lib/docker/volumes/
+ 1171  ls
+ 1172  #docker container run -d --name cont2 -v /mnt/pushpa2:/tmp  nginx
+ 1173  #docker container run -d --name cont1 -v pushpa2:/tmp  nginx
+ 1174  cd
+ 1175  docker ps
+ 1176  docker container exec -it newcont bash
+ 1177  docker ps
+ 1178  docker container run -d --name cont3 -p 80:80  -v pushpa2:/tmp  nginx
+ 1179  docker ps
+ 1180  docker container run -d --name cont4 -p 80:80  -v pushpa2:/tmp  nginx
+ 1181  docker container run -d --name cont5 -p 8080:80  -v pushpa2:/tmp  nginx
+ 1182  docker ps
