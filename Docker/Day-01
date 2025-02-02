@@ -1,0 +1,52 @@
+ 1001  yum install docker
+ 1002  docker container run nginx
+ 1003  docker container run -d nginx
+ 1004  ls
+ 1005  docker container ls
+ 1006  docker-compose down
+ 1007  docker container rm -f ec5bc32c804f aec4cbd9fafe
+ 1008  docker container ls
+ 1009  docker ps
+ 1010  #docker container run -d nginx
+ 1011  ps -ef
+ 1012  docker ps
+ 1013  #docker container run -d nginx
+ 1014  docker container run --name mycont  -d nginx
+ 1015  docker system prune
+ 1016  docker container run --name mycont  -d nginx
+ 1017  docker ps
+ 1018  docker container run --name mycont  -d ngin
+ 1019  docker login
+ 1020  docker container run --name mycont  -d ngin
+ 1021  docker container run --name mycont  -d ubuntu
+ 1022  docker container run --name mycont1  -d ubuntu
+ 1023  docker ps
+ 1024  docker ps -a
+ 1025  #docker container run --name mycont1  -d ubuntu
+ 1026  docker container run --name mycont2  -d ubuntu sleep 60
+ 1027  docker ps
+ 1028  watch docker ps
+ 1029  watch docker ps -a
+ 1030  docker ps -a
+ 1031  docker logs 62ee1c4ef1f2
+ 1032  docker logs mycont2
+ 1033  docker logs mycont
+ 1034  docker ps -a
+ 1035  docker container stop reverent_ramanujan
+ 1036  docker ps -a
+ 1037  docker container start reverent_ramanujan
+ 1038  docker ps -a
+ 1039  docker container pause reverent_ramanujan
+ 1040  docker ps -a
+ 1041  docker container unpause reverent_ramanujan
+ 1042  docker ps -a
+ 1043  ##docker container run --name mycont1  -d ubuntu
+ 1044  ##docker container run  -d ubuntu
+ 1045  #docker ps
+ 1046  #docker ps -a
+ 1047  #docker container start reverent_ramanujan
+ 1048  #docker container stop reverent_ramanujan
+ 1049  #docker container pause reverent_ramanujan
+ 1050  #docker container unpause reverent_ramanujan
+ 1051  #docker logs mycont2
+ 1052  docker ps
