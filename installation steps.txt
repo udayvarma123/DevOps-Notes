@@ -18,10 +18,10 @@ Jenkins installation
 
 curl --silent --location http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo | sudo tee /etc/yum.repos.d/jenkins.repo
 sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
-yum install jenkins
-systemctl start jenkins --> install the latest version
+yum install jenkins --> install the latest version
 OR
 yum install jenkins-2.401.3-1.1 --> install a specific version
+systemctl start jenkins 
 systemctl status jenkins
 systemctl enable jenkins
 cat /var/lib/jenkins/secrets/initialAdminPassword
