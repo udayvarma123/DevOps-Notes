@@ -32,7 +32,7 @@ spec:
 Node selector -
 
 Add label to a node
-kubectl label node agent env:test
+kubectl label node agent env=test
 
 remove label from a node
 kubectl label node agent env-
