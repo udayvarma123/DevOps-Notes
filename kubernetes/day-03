@@ -1,0 +1,54 @@
+  102  kubectl get no
+  103  git clone https://github.com/nginx/kubernetes-ingress.git --branch <version_number>
+  104  git clone https://github.com/nginx/kubernetes-ingress.git --branch master
+  105  yum install git
+  106  git clone https://github.com/nginx/kubernetes-ingress.git --branch main
+  107  ls
+  108  cd kubernetes-ingress/
+  109  ls
+  110  kubectl apply -f deployments/common/ns-and-sa.yaml
+  111  kubectl apply -f deployments/rbac/rbac.yaml
+  112  kubectl apply -f deployments/rbac/ap-rbac.yaml
+  113  kubectl apply -f deployments/rbac/apdos-rbac.yaml
+  114  kubectl apply -f examples/shared-examples/default-server-secret/default-server-secret.yaml
+  115  kubectl apply -f deployments/common/nginx-config.yaml
+  116  kubectl apply -f deployments/common/ingress-class.yaml
+  117  kubectl get ns
+  118  ls
+  119  kubectl get all -n nginx-ingress
+  120  kubectl get all
+  121  kubectl get all -A
+  122  kubectl apply -f deployments/common/ns-and-sa.yaml
+  123  kubectl apply -f deployments/common/nginx-config.yaml
+  124  kubectl get cm -n nginx-ingress
+  125  kubectl get deploy -n nginx-ingress
+  126  kubectl get svc -n nginx-ingress
+  127  ls
+  128  kubectl apply -f common/ns-and-sa.yaml
+  129  kubectl apply -f rbac/rbac.yaml
+  130  kubectl apply -f common/default-server-secret.yaml
+  131  kubectl apply -f common/nginx-config.yaml
+  132  kubectl apply -f common/ingress-class.yaml
+  133  kubectl apply -f daemon-set/nginx-ingress.yaml
+  134  cd deploy
+  135  ls
+  136  cd ..
+  137  ls
+  138  cd deployments/
+  139  ls
+  140  kubectl apply -f common/ns-and-sa.yaml
+  141  kubectl apply -f rbac/rbac.yaml
+  142  kubectl apply -f common/default-server-secret.yaml
+  143  kubectl apply -f common/nginx-config.yaml
+  144  kubectl apply -f common/ingress-class.yaml
+  145  kubectl apply -f daemon-set/nginx-ingress.yaml
+  146  kubectl get all -n nginx-ingress
+  147  cd ..
+  148  ls
+  149  kubectl apply -f deployments/deployment/nginx-ingress.yaml
+  150  kubectl apply -f deployments/daemon-set/nginx-ingress.yaml
+  151  kubectl get pods --namespace=nginx-ingress
+  152  kubectl create -f deployments/service/nodeport.yaml
+  153  kubectl apply -f deployments/service/loadbalancer.yaml
+  154  kubectl apply -f deployments/common/nginx-config.yaml
+  155  kubectl get all -n nginx-ingress
