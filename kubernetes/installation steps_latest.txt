@@ -142,3 +142,10 @@ kubeadm join 172.31.35.132:6443 --token dvssj4.rwkzpq5imcnbbye6  --discovery-tok
 or use the below command to to get the exact command to add a worker nodes
 kubeadm token create --print-join-command
 
+
+###################################
+To reset the kubernetres installation , run the below commands and then start the instalaation steps again
+kubeadm reset
+rm -rf  /var/lib/kubelet
+rm -rf /var/lib/etcd
+
