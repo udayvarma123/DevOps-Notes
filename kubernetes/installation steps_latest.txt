@@ -101,7 +101,7 @@ g.
    systemctl enable containerd
    systemctl status containerd
 
-h.
+h. run , sysctl -w net.ipv4.ip_forward=1 and then run below command
 
 cat <<EOF > /etc/yum.repos.d/kubernetes.repo
 [kubernetes]
