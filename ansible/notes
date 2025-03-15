@@ -1,0 +1,107 @@
+-- Adding agent with master - 
+
+Edit agent IP and agent Name entry in /etc/hosts file of master for Name to IP Mapping:
+172.31.19.138 agent
+
+Generate SSH keypair and copy keypair in remote machine for passwordless connection:
+ssh-keygen 
+ssh-copy-id agent
+	
+Put client name entry in in /etc/ansible/hosts file of master , so that it can be managed with ansible:
+agent
+
+checking if master knows agent - 
+
+Run ansible commands to check if client host is manageable with ansible or not:
+ansible agent –m ping --ask-pass
+
+-- Variables in /etc/ansible/hosts file -
+
+Provide username and password and other variables (if needed) in /etc/ansible/hosts file and run command without password:
+agent ansible_connection=ssh  ansible_user=salil ansible_user=USER ansible_password=PASSWORD
+
+-- Password less connection between agent and master -
+
+
+
+-- Adhoc commands example -
+
+as arguments -
+
+ansible agent -a "touch myfile"
+
+ansible agent -a "uname -a"
+
+as modules -
+
+Check the uptime using Ansible Ad-hoc command
+ansible agent -m uptime
+
+or
+
+ansible agent -m shell -a "uptime"
+	
+Check OS release using Ansible Ad-hoc command
+ansible agent -a "uname -a"
+	
+Install a package named “telnet” on agent
+ansible agent -m package -a "name=telnet state=installed"
+	
+To uninstall the same package on agent , 
+ansible agent -m package -a "name=telnet state=absent"
+	
+Create a user named “testuser” with bash shell having user id of 9999 on master
+ansible agent -m user -a "name=testuser uid=9999 state=present"
+
+Delete the user
+ansible agent -m user -a "name=testuser uid=9999 state=absent"
+	
+Create a file named “/tmp/myfile” with permission 777 and user + owner as root on master
+ansible agent -m file -a "path=/tmp/myfile mode=777 group=root owner=root state=touch"
+	
+Copy a local file to remote machine
+ansible agent -m copy -a "src=/tmp/myfile dest=/root mode=777"
+	
+Run multiple commands parallelly with shell module
+ansible agent -m shell -a "ls;uname -a"
+
+--Finding Modules and Attributes -
+ansible-doc –l
+ansible-doc -v service
+
+--Command to see all FACTS:
+ansible all -m setup --ask-pass
+ansible agent -m setup -a "filter=*ipv4*"
+ansible agent -m setup | grep -i "ansible_"
+
+--Syntax checks for Playbooks:
+ansible-playbook --syntax-check play1.yml
+
+--To see what hosts would be affected by a playbook before you run it:
+ansible-playbook playbook.yml --list-hosts
+
+--Dry Runcheck for playbooks:
+ansible-playbook  <playbook-name>  --check
+
+--Real time run for playbooks:
+ansible-playbook <playbook-name> 
+
+--Moving through task by task execution:
+ansible-playbook <playbook-name> --step
+
+--for variable -
+ansible-playbook <playbook-name> -e user2="hyurh"
+
+--for tags - 
+ansible-playbook <playbook-name> --tags dev
+ansible-playbook <playbook-name> --tags prod,db
+ansible-playbook <playbook-name> --skip-tags prod
+
+--strategy - linear, free behaviour -
+ansible-doc -t strategy -l
+
+
+
+
+
+
