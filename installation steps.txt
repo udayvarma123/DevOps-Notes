@@ -134,12 +134,20 @@ terraform --version
 
 Ansible installation - 
 
-yum install ansible
-OR
-amazon-linux-extras install ansible2
+Ansible installation - 
 
+yum install -y python3-pip
+python3 -m pip install --user --upgrade pip
+python3 -m pip install ansible
 ansible --version
-
+OR
+yum update
+yum install ansible
+ansible --version
+OR
+apt update
+apt install ansible
+ansible --version
 
 AWS CLI installation
 
