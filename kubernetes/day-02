@@ -1,0 +1,212 @@
+   56  kubectl apply -f deploy.yaml
+   57  kubectl get deploy
+   58  kubectl get po
+   59  kubectl get no
+   60  kubectl describe no | grep -i taint
+   61  kubectl taint no master node-role.kubernetes.io/control-plane-
+   62  kubectl get no
+   63  kubectl get deploy
+   64  kubectl get po
+   65  kubectl delete -f deploy.yaml
+   66  kubectl get po
+   67  vi deploy.yaml
+   68  kubectl apply -f deploy.yaml
+   69  vi deploy.yaml
+   70  kubectl apply -f deploy.yaml
+   71  kubectl delete -f deploy.yaml
+   72  cat deploy.yaml
+   73  kubectl apply -f deploy.yaml
+   74  kubectl delete po ng-dep-6797867955-gdcr4
+   75  kubectl run testpod --image=nginx
+   76  kubectl get po --show-labels
+   77  #kubectl run testpod --image=nginx
+   78  cat deploy.yaml
+   79  kubectl get po --show-labels
+   80  kubectl label po testpod target=dev
+   81  kubectl get po --show-labels
+   82  kubectl label po testpod pod-template-hash=6797867955
+   83  vi deploy.yaml
+   84  kubectl apply -f deploy.yaml
+   85  kubectl get po --show-labels
+   86  kubectl scale deploy ng-dep --replicas=3
+   87  kubectl get po --show-labels
+   88  vi deploy.yaml
+   89  kubectl delete -f deploy.yaml
+   90  vi deploy.yaml
+   91  kubectl apply -f  deploy.yaml
+   92  vi deploy.yaml
+   93  kubectl apply -f  deploy.yaml
+   94  kubectl  get deploy
+   95  vi deploy.yaml
+   96  kubectl apply -f  deploy.yaml
+   97  kubectl rollout history deploy/ng-dep
+   98  kubectl rollout undo depoy/ng-dep --to-revision=1
+   99  kubectl rollout undo deploy/ng-dep --to-revision=1
+  100  watch kubectl get po
+  101  watch kubectl get rs
+  102  kubectl get no
+  103  kubectl  get no
+  104  ls
+  105  vi deploy.yaml
+  106  kubectl get po
+  107  kubectl get deploy
+  108  kubectl describe po ng-dep-6797867955-72l4x
+  109  kubectl get no
+  110  kubectl get deploy
+  111  kubectl get po
+  112  kubectl exec -it ng-dep-6797867955-72l4x -- bash
+  113  vi deploy.yaml
+  114  kubectl apply -f deploy.yaml
+  115  kubectl get po
+  116  kubectl exec -it ng-dep-599694f9c8-8nnbc -- bash
+  117  l
+  118  kubectl get po
+  119  vi deploy.yaml
+  120  vi svc.yaml
+  121  kubectl apply -f svc.yaml
+  122  kubectl get svc
+  123  cat svc.yaml
+  124  vi svc.yaml
+  125  kubectl apply -f svc.yaml
+  126  kubectl get svc
+  127  curl -v 10.100.41.132
+  128  hostname -i
+  129  curl -v 172.31.45.41
+  130  curl -v ng-svc-cp
+  131  kubectl delete -f svc.yaml
+  132  kubectl apply -f svc.yaml
+  133  kubectl get svc
+  134  curl -v localhost
+  135  kubectl describe svc ng-svc-cp
+  136  curl -v 10.107.181.101
+  137  curl -v 172.31.45.41
+  138  kubectl get svc
+  139  kubectl exec -it ng-dep-599694f9c8-8nnbc -- bash
+  140  kubectl get po
+  141* kubectl delete po ng-dep-599694f9c8-8nnb
+  142  kubectl get po
+  143  kubectl exec -it ng-dep-599694f9c8-b87rx -- bash
+  144  kubectl get no
+  145  kubectl get deploy
+  146  kubectl get po
+  147  kubectl get svc
+  148  kubectl describe svc ng-svc-cp
+  149  kubectl get po -o wide
+  150  cat svc.yaml
+  151  vi svc.yaml
+  152  kubectl apply -f svc.yaml
+  153  kubectl describe svc ng-svc-cp
+  154  kubectl get po --show-label
+  155  kubectl get po --show-labels
+  156  kubectl get po
+  157  kubectl exec -it ng-dep-599694f9c8-b87rx -- bash
+  158  kubectl get svc
+  159  kubectl describe svc ng-svc-cp
+  160  vi deploy.yaml
+  161  vi svc.yaml
+  162  kubectl apply -f svc.yaml
+  163  kubectl describe svc ng-svc-cp
+  164  kubectl get svc
+  165  vi svc.yaml
+  166  vi svc-np.yaml
+  167  kubectl apply -f svc-np.yaml
+  168  kubectl get svc
+  169  kubectl describe svc ng-svc
+  170* k svc-np.yaml
+  171  kubectl get po -o wide
+  172* kubectl  get svc-np
+  173  cat svc.yaml
+  174  cat svc-np.yaml
+  175  kubectl describe svc ng-svc
+  176  kubectl get svc
+  177  kubectl delete -f  svc-np.yaml
+  178  kubectl get svc
+  179  kubectl apply -f  svc-np.yaml
+  180  kubectl get svc
+  181  kubectl delete -f  svc-np.yaml
+  182  vi svc-np.yaml
+  183  kubectl apply -f  svc-np.yaml
+  184  vi svc-np.yaml
+  185  kubectl apply -f  svc-np.yaml
+  186  kubectl get svc
+  187  kubectl delete -f  svc-np.yaml
+  188  kubectl get svc
+  189  kubectl apply -f  svc-np.yaml
+  190  kubectl get svc
+  191  cat svc-np.yaml
+  192  kubectl describe svc ng-svc
+  193  vi deploy.yaml
+  194  kubectl get po -o wide
+  195  kubectl get svc
+  196  ls
+  197  cp svc-np.yaml svc-lb.yaml
+  198  vi svc-lb.yaml
+  199  kubectl apply -f svc-lb.yaml
+  200  vi svc-lb.yaml
+  201  kubectl apply -f svc-lb.yaml
+  202  vi svc-lb.yaml
+  203  kubectl apply -f svc-lb.yaml
+  204  kubectl get po
+  205  kubectl get svc
+  206  kubectl describe svc ng-svc-lb
+  207  kubectl get svc
+  208  kubectl get no
+  209  kubectl describe no master
+  210  history | grep -i taint
+  211  kubectl taint no master node-role.kubernetes.io/control-plane
+  212  kubectl taint no master node-role.kubernetes.io/control-plane:No Schedule
+  213  kubectl taint no master node-role.kubernetes.io/control-plane:NoSchedule
+  214  kubectl get no
+  215  kubectl describe no master
+  216  kubectl describe no | grep -i taint
+  217  kubectl get no --show-labels
+  218  kubectl label node gitlab-runner env:test
+  219  kubectl label node gitlab-runner env=test
+  220  vi pod-label.yaml
+  221  kubectl apply -f pod-label.yaml
+  222  kubectl get po -o wide
+  223  kubectl delete -f pod-label.yaml
+  224  vi pod-label.yaml
+  225  kubectl apply -f pod-label.yaml
+  226  kubectl get po -o wide
+  227  vi pod-label.yaml
+  228  kubectl describe po nginx-pod
+  229  vi pod-label.yaml
+  230  kubectl apply -f pod-label.yaml
+  231  kubectl get po -o wide
+  232  kubectl delete po nginx-pod
+  233  kubectl apply -f pod-label.yaml
+  234  kubectl get po -o wide
+  235  kubectl scale deploy ng-dep --replicas=1
+  236  kubectl get po -o wide
+  237  kubectl get no
+  238  kubectl taint nodes gitlab-runner env=test:NoSchedule
+  239  kubectl describe no | grep -i taint
+  240  kubectl delete po nginx-pod
+  241  kubectl apply -f pod-label.yaml
+  242  kubectl get no
+  243  kubectl get po -o wide
+  244  vi  pod-toleration.yaml
+  245  kubectl apply -f   pod-toleration.yaml
+  246  kubectl get po
+  247  cat pod-toleration.yaml
+  248  #noschedule
+  249  #prefernoschedule
+  250  #noexecute
+  251  #kubectl taint nodes gitlab-runner env=test:NoSchedule
+  252  kubectl get po
+  253  kubectl taint nodes gitlab-runner env=test:NoSchedule-
+  254  kubectl get po
+  255  kubectl taint nodes gitlab-runner env=test:NoExecute
+  256  kubectl get po
+  257  kubectl get ns
+  258  kubectl  get po
+  259  kubectl create ns test
+  260  kubectl  get po
+  261  kubectl get ns
+  262  vi pod-ns.yaml
+  263  kubectl apply -f pod-ns.yaml
+  264  kubectl get po
+  265  kubectl get po -n test
+  266  kubectl get ns
+  267  kubectl get po -n kube-system

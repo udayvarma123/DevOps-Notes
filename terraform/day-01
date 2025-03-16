@@ -1,0 +1,101 @@
+ 1003  mkdir terraform
+ 1004  cd terraform/
+ 1005  ls -ltr
+ 1006  mv  /tmp/ec2.tf .
+ 1007  vi ec2.tf
+ 1008  ls -ltr
+ 1009  terraform plan
+ 1010  ls -ltr
+ 1011  ls -ltra
+ 1012  terraform init
+ 1013  ls -ltra
+ 1014  cd .terraform/plugins/registry.terraform.io/hashicorp/aws/
+ 1015  ls
+ 1016  cd 5.90.0/linux_amd64/
+ 1017  ls
+ 1018  vi az.tf
+ 1019  terraform plan
+ 1020  ls
+ 1021  cd
+ 1022  cd  terraform/
+ 1023  ls
+ 1024  cd .terraform/plugins/registry.terraform.io/hashicorp/aws/
+ 1025  ls
+ 1026  cd 5.90.0/linux_amd64/
+ 1027  ls
+ 1028  mv az.tf /root/terraform/
+ 1029  cd
+ 1030  cd terraform/
+ 1031  ls
+ 1032  terraform init
+ 1033  rm az.tf
+ 1034  ls
+ 1035  terraform plan
+ 1036  terraform apply
+ 1037  cat ec2.tf
+ 1038  terraform destroy
+ 1039  ls -ltr
+ 1040  vi ec2.tf
+ 1041  terraform plan
+ 1042  terraform apply
+ 1043  terraform apply --auto-approve
+ 1044  terraform destroy
+ 1045  ls -ltr
+ 1046  rm -rf terraform.tfstate
+ 1047  rm -rf terraform.tfstate.backup
+ 1048  ls
+ 1049  vi ec2.tf
+ 1050  terraform apply
+ 1051  ls -ltra
+ 1052  terraform apply
+ 1053  vi terraform.tfstate
+ 1054  terraform destroy
+ 1055  ls -ltr
+ 1056  rm terraform.tfstate
+ 1057  terraform destroy
+ 1058  ls -ltr
+ 1059  rm terraform.tfstate
+ 1060  ls -ltr
+ 1061  terraform apply
+ 1062  vi ec2.tf
+ 1063  terraform apply
+ 1064  ls -ltr
+ 1065  terraform destroy
+ 1066  rm -rf terraform.tfstate
+ 1067  rm -rf terraform.tfstate.backup
+ 1068  terraform destroy
+ 1069  ls -ltra
+ 1070  rm -rf .terraform/
+ 1071  rm -rf terraform.tfstate
+ 1072   ls -ltr
+ 1073  terraform init
+ 1074  mv /tmp/provider.tf .
+ 1075  vi provider.tf
+ 1076  terraform init
+ 1077  terraform apply
+ 1078  terraform destroy
+ 1079  terraform init
+ 1080  terraform destroy
+ 1081  cat provider.tf
+ 1082  pwd
+ 1083  ls -ltr
+ 1084  aws configure
+ 1085  cd .aws
+ 1086  ls
+ 1087  cd
+ 1088  cd .aws/
+ 1089  ls
+ 1090  cat config
+ 1091  cat credentials
+ 1092  ls
+ 1093  rm config
+ 1094  rm credentials
+ 1095  cd
+ 1096  cd terraform/
+ 1097  terraform apply
+ 1098  aws configure
+ 1099  terraform apply
+ 1100  vi provider.tf
+ 1101  ls -ltr
+ 1102  terraform init
+ 1103  cat provider.tf

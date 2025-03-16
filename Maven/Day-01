@@ -1,0 +1,150 @@
+  985  cd java-project/
+  986  ls
+  987  tree
+  988  mvn compile
+  989  ls
+  990  tree
+  991  cd target//classes/simplilearn/dummy/
+  992  less DummyApplication.class
+  993  cd ../../..
+  994  cd ..
+  995  ls
+  996  #mvn compile
+  997  tree
+  998  ls
+  999  mvn test
+ 1000  ls
+ 1001  tree
+ 1002  #mvn compile
+ 1003  #mvn test
+ 1004  ls
+ 1005  mvn package
+ 1006  tree
+ 1007  java - jar myproject-0.0.1-SNAPSHOT.jar
+ 1008  java -jar myproject-0.0.1-SNAPSHOT.jar
+ 1009  ls
+ 1010  java -jar ./target/myproject-0.0.1-SNAPSHOT.jar
+ 1011  #java -jar ./target/myproject-0.0.1-SNAPSHOT.jar
+ 1012  ls
+ 1013  cd src/main/resources/
+ 1014  ls
+ 1015  cd ../java/
+ 1016  ls
+ 1017  cd learning/
+ 1018  ls
+ 1019  cd myproject/
+ 1020  ls
+ 1021  cat DummyApplication.java
+ 1022  #mvn compile
+ 1023  #mvn test
+ 1024  #mvn package
+ 1025  ls
+ 1026  cd
+ 1027  cd java-project/
+ 1028  ls
+ 1029  #mvn compile
+ 1030  #mvn test
+ 1031  #mvn package
+ 1032  #java -jar ./target/myproject-0.0.1-SNAPSHOT.jar
+ 1033  ls
+ 1034  mvn compile
+ 1035  mvn test
+ 1036  mvn package
+ 1037  date
+ 1038  ls -ltr
+ 1039  mvn clean
+ 1040  ls
+ 1041  mvn install
+ 1042  tree
+ 1043  #mvn install == mvn compile + mvn test + mvn package
+ 1044  ls
+ 1045  mvn clean install
+ 1046  tree
+ 1047  #mvn install == mvn compile + mvn test + mvn package
+ 1048  #mvn clean install == mvn clean + mvn install
+ 1049  #mvn compile
+ 1050  #mvn test
+ 1051  #mvn package
+ 1052  #java -jar ./target/myproject-0.0.1-SNAPSHOT.jar
+ 1053  ls
+ 1054  cd src/main/java/learning/myproject/
+ 1055  ls
+ 1056  vi DummyApplication.java
+ 1057  mvn clean install
+ 1058  cd
+ 1059  cd java-project/
+ 1060  mvn clean install
+ 1061  cd
+ 1062  cd .mvn
+ 1063  cd
+ 1064  ls -ltra
+ 1065  rm -rf .m2
+ 1066  cd java-project/
+ 1067  ls
+ 1068  mvn clean install
+ 1069  ls
+ 1070  cd src/main/java/learning/myproject/
+ 1071  ls
+ 1072  vi DummyApplication.java
+ 1073  cd
+ 1074   cd java-project/
+ 1075  mvn clean install
+ 1076  ls
+ 1077  tree
+ 1078  ls
+ 1079  vi src/main/java/learning/myproject/DummyApplication.java
+ 1080  ls
+ 1081  cd target/
+ 1082  mvn clean install
+ 1083  ls
+ 1084  cd ..
+ 1085  ls
+ 1086  cd
+ 1087  mvn archetype:generate
+ 1088  ls
+ 1089  cd qq
+ 1090  ls
+ 1091  cd ..
+ 1092  rm -rf qq
+ 1093  ls
+ 1094  cd java-project/
+ 1095  ls
+ 1096  vi pom.xml
+ 1097  tree
+ 1098  mvn clean isntall
+ 1099  mvn clean install
+ 1100  tree
+ 1101  vi pom.xml
+ 1102  l;s
+ 1103  ls
+ 1104  cd
+ 1105  ls
+ 1106  mv  java-project /tmp/
+ 1107  ls
+ 1108  ls -ltr
+ 1109  git clone https://github.com/salilkul/java-project.git
+ 1110  ls
+ 1111  cd java-project/
+ 1112  ls
+ 1113  mvn clean install
+ 1114  ls
+ 1115  tree
+ 1116  ls
+ 1117  cat Dockerfile
+ 1118  vi Dockerfile
+ 1119  cat Dockerfile
+ 1120  docker build -t javaimg:1.0 .
+ 1121  docker image ls
+ 1122  #docker image push javaimg:1.0
+ 1123  doker login
+ 1124  docker login
+ 1125  docker image tag javaimg:1.0 salilkul87/javaimg:1.0
+ 1126  docker image push salilkul87/javaimg:1.0
+ 1127  ls
+ 1128  docker container run -d --name javacont salilkul87/javaimg:1.0
+ 1129  docker ps -a
+ 1130  docker logs ba43da0550ff
+ 1131  docker rm -f ba43da0550ff
+ 1132  #java - jar <>
+ 1133  #docker container run -d --name javacont salilkul87/javaimg:1.0
+ 1134  cat Dockerfile

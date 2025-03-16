@@ -1,0 +1,83 @@
+  935  #ansible agent -m package -a "name=telnet state=present"
+  936  ansible agent -m user -a "name=testuser state=present"
+  937  ansible agent -m file -a "path=/tmp/myfile mode=777 group=root owner=root state=touch"
+  938  ls
+  939  #ansible agent -m user -a "name=testuser state=present"
+  940  ls
+  941  cd ansible/
+  942  ls
+  943  #playbook --> play --> task --> module
+  944  #ansible agent -m user -a "name=testuser state=present"
+  945  cat create_user.yaml
+  946  vi create_user.yaml
+  947  ls
+  948  ansible-playbook create_user.yaml
+  949  ls
+  950  vi delete_user.yaml
+  951  ansible-playbook delete_user.yaml
+  952  vi create_user.yaml
+  953  ansible-playbook create_user.yaml
+  954  vi create_user.yaml
+  955  ansible-playbook create_user.yaml
+  956  #idempotency
+  957  ls
+  958  vi pkg-install.yaml
+  959  ansible-playbook pkg-install.yaml
+  960  ls
+  961  mv aws /home/salil/
+  962  ls
+  963  vi pkg-install.yaml
+  964  ansible-playbook pkg-install.yaml
+  965  date
+  966  systemctl start httpd
+  967  ls
+  968  vi pkg-install.yaml
+  969  vi test_script.sh
+  970  chmod +x test_script.sh
+  971  ansible-playbook pkg-install.yaml
+  972  vi test_script.sh
+  973  ansible-playbook pkg-install.yaml
+  974  ls
+  975  vi test_script.sh
+  976  vi pkg-install.yaml
+  977  mv test_script.sh /tmp/
+  978  vi pkg-install.yaml
+  979  ls
+  980  ansible-playbook pkg-install.yaml
+  981  vi pkg-install.yaml
+  982  ls
+  983  vi playbook-apache-setup.yaml
+  984  ansible-playbook playbook-apache-setup.yaml
+  985  vi playbook-apache-setup.yaml
+  986  ansible-playbook playbook-apache-setup.yaml
+  987  vi playbook-apache-setup.yaml
+  988  ls
+  989  vi register-demo.yaml
+  990  ansible-playbook register-demo.yaml
+  991  vi register-demo.yaml
+  992  vi pkg-install.yaml
+  993  vi playbook-apache-setup.yaml
+  994  vi register-demo.yaml
+  995  cd ansible/
+  996  ls
+  997  vi register-demo.yaml
+  998  ansible-playbook register-demo.yaml
+  999  vi register-demo.yaml
+ 1000  ansible-playbook register-demo.yaml
+ 1001  vi register-demo.yaml
+ 1002  ansible-playbook register-demo.yaml
+ 1003  vi register-demo.yaml
+ 1004  ansible-playbook register-demo.yaml
+ 1005  vi register-demo.yaml
+ 1006  ansible agent -m setup
+ 1007  vi register-demo.yaml
+ 1008  ansible agent -m setup
+ 1009  ansible-playbook register-demo.yaml
+ 1010  vi register-demo.yaml
+ 1011  ansible-playbook register-demo.yaml
+ 1012  vi /etc/ansible/ansible.cfg
+ 1013  #ansible agent -m setup
+ 1014  ls
+ 1015  vi register-demo.yaml
+ 1016  ansible-playbook -v register-demo.yaml
+ 1017  ansible-playbook -vvv register-demo.yaml

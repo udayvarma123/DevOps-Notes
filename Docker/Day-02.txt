@@ -1,0 +1,197 @@
+ 1000  docker ps -a
+ 1001  docker system prune
+ 1002  docker ps -a
+ 1003  docker container run -d --name mycont nginx
+ 1004  docker ps
+ 1005  docker container run -d --name mycont nginx
+ 1006  docker container run -d --name mycont1 nginx
+ 1007  docker ps
+ 1008  #docker container start reverent_ramanujan
+ 1009  #docker container stop reverent_ramanujan
+ 1010  #docker container pause reverent_ramanujan
+ 1011  #docker container unpause reverent_ramanujan
+ 1012  docker ps
+ 1013  docker container stop b17b70f19c69
+ 1014  docker ps
+ 1015  docker ps -a
+ 1016  docker container start b17b70f19c69
+ 1017  docker ps -a
+ 1018  docker container rm b17b70f19c69
+ 1019  docker container rm -f b17b70f19c69
+ 1020  docker ps -a
+ 1021  #docker container stop b17b70f19c69
+ 1022  #docker container start b17b70f19c69
+ 1023  #docker container rm -f b17b70f19c69
+ 1024  docker container run -d --name mycont nginx
+ 1025  docker container run -d --name mycont1 nginx
+ 1026  docker container run -d --name mycont2 nginx
+ 1027  docker container run -d --name mycont3 nginx
+ 1028  docker ps
+ 1029  docker container run -d --name mycont4 nginx
+ 1030  docker ps
+ 1031  docker stats
+ 1032  free -m
+ 1033  free -g
+ 1034  free -m
+ 1035  #cgroups
+ 1036  docker container run -d --name mycont5 --mem 500m nginx
+ 1037  docker container run -d --name mycont5 -m 500m nginx
+ 1038  docker stats
+ 1039  #docker container run -d --name mycont5 -m 500m nginx
+ 1040  #cgroups
+ 1041  docker system df
+ 1042  docker ps -a
+ 1043  docker system df
+ 1044  docker ps -a -s
+ 1045  df -h
+ 1046  docker system df
+ 1047  docker ps
+ 1048  docker container stop mycont5 mycont4 mycont3
+ 1049  docker system df
+ 1050  docker ps -a
+ 1051  docker container prune
+ 1052  docker system df
+ 1053  docker ps
+ 1054  docker container rename mycont newcont
+ 1055  docker ps
+ 1056  docker image ls
+ 1057  docker images
+ 1058  docker system df
+ 1059  docker ps
+ 1060  docker container run -d --name mysql mysql:5.7
+ 1061  docker system df
+ 1062  docker ps
+ 1063  docker images
+ 1064  docker system df
+ 1065  docker ps -a
+ 1066  docker image prune
+ 1067  docker images
+ 1068  docker image prune
+ 1069  docker image rm b1d9df8ab815
+ 1070  docker image rm 60918f023aac
+ 1071  docker image rm 4c9b15c9a8ae
+ 1072  docker images
+ 1073  docker image rm 1bcf11fa154f
+ 1074  docker images
+ 1075  docker image rm 3b25b682ea82
+ 1076  docker image rm -f 3b25b682ea82
+ 1077  docker container rm -f eb2e769c5163
+ 1078  docker ps -a
+ 1079  docker container rm -f bac781a0b2cb 405df3b4068c b0dbc3820aaf
+ 1080  docker images
+ 1081  docker rmi nginx
+ 1082  docker image rm 5107333e08a8
+ 1083  docker ps -a
+ 1084  docker images
+ 1085  docker container run -d --name mycont nginx
+ 1086  docker images
+ 1087  docker container run -d --name mycont nginx
+ 1088  docker images
+ 1089  docker container run -d --name mycont1 nginx
+ 1090  docker images
+ 1091  docker image pull ubuntu
+ 1092  docker images
+ 1093  #docker.io/library/ubuntu:latest == library/ubuntu:latest
+ 1094* docker image pull ubuntu
+ 1095  #docker.io/library/ubuntu:latest == library/ubuntu:latest == ubuntu
+ 1096  docker image pull ubun
+ 1097  docker logout
+ 1098  docker pull salilkul87/myimg:17.0
+ 1099  docker pull salilkul87/myjava-image:3
+ 1100  #docker image pull ubuntu
+ 1101  #docker.io/library/ubuntu:latest == docker.io/salilkul87/myjava-image
+ 1102  docker pull myjava-image:3
+ 1103  docker pull salilkul87/myjava-image:3
+ 1104  docker pull salilkul87/myimg:17.0
+ 1105  docker login
+ 1106  docker pull salilkul87/myimg:17.0
+ 1107  docker logout
+ 1108  docker login
+ 1109  cat /root/.docker/config.json
+ 1110  rm /root/.docker/config.json
+ 1111  docker pull salilkul87/myjava-image:3
+ 1112  docker pull salilkul87/myimg:17.0
+ 1113  ls -ltr /root/.docker/config.json
+ 1114  docker login
+ 1115  ls -ltr /root/.docker/config.json
+ 1116  date
+ 1117  cd /home/
+ 1118  ls
+ 1119  pwd
+ 1120  cd
+ 1121  pwd
+ 1122  #ls -ltr /root/.docker/config.json
+ 1123  ls
+ 1124  mkdir docker
+ 1125  cd docker
+ 1126  visudo
+ 1127  ls
+ 1128  vi Dockerfile
+ 1129  ls
+ 1130  docker build -t myimg .
+ 1131  docker image ls
+ 1132  docker image rm d330feee03cc 96fa943508eb
+ 1133  docker image ls
+ 1134  cat Dockerfile
+ 1135  vi Dockerfile
+ 1136  ls
+ 1137  mv Dockerfile Myfile
+ 1138  ls
+ 1139  docker build -t myimg .
+ 1140  docker build -t myimg -f Myfile .
+ 1141  docker image ls
+ 1142  ls
+ 1143  mv Myfile Dockerfile
+ 1144  vi Dockerfile
+ 1145  #docker build -t myimg .
+ 1146  ls
+ 1147  cat Dockerfile
+ 1148  docker build -t myimg .
+ 1149  pwd
+ 1150  ls
+ 1151  vi basefile
+ 1152  ls
+ 1153  docker build -t myimg .
+ 1154  docker image ls
+ 1155  docker container run -it --name mycont myimg bash
+ 1156  docker container run -it --name mycont3 myimg bash
+ 1157  cat Dockerfile
+ 1158  docker ps
+ 1159  docker container rm -f mycont1
+ 1160  docker container ls
+ 1161  docker container exec -it mycont bash
+ 1162  ls
+ 1163  docker container cp basefile mycont:/
+ 1164  docker container exec -it mycont bash
+ 1165  vi Dockerfile
+ 1166  docker container run -it --name mycont3 myimg bash
+ 1167  docker container run -it --name mycont4 myimg bash
+ 1168  vi Dockerfile
+ 1169  l
+ 1170  cat Dockerfile
+ 1171  docker image ls
+ 1172  ls
+ 1173  vi myfile
+ 1174  ls
+ 1175  vi Dockerfile
+ 1176  docker build -t myimg .
+ 1177  docker container run -it --name mycont5 myimg bash
+ 1178  docker image ls
+ 1179  docker container run -it --name mycont6 43fba67b27c8  bash
+ 1180  docker container prune
+ 1181  docker container run -it --name mycont6 43fba67b27c8  bash
+ 1182  docker image ls
+ 1183  docker image prune
+ 1184  docker image ls
+ 1185  docker container ls
+ 1186  docker container ls -a
+ 1187  docker image ls
+ 1188  #docker build -t myimg .
+ 1189  docker build -t myimg:1.0 .
+ 1190  vi Dockerfile
+ 1191  docker build -t myimg:2.0 .
+ 1192  docker image ls
+ 1193  vi Dockerfile
+ 1194  docker build -t myimg:3.0 .
+ 1195  docker image ls
+ 1196  vi Dockerfile

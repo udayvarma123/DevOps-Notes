@@ -1,0 +1,232 @@
+  714  docker system prune
+  715  docker ps
+  716  docker ps -a
+  717  docker image ls
+  718  docker container run -d --name mycont nginx
+  719  docker ps
+  720  docker container exec -it mycont bash
+  721  docker ps
+  722  docker image ls
+  723  docker container run -d --name testcont nginx
+  724  docker container exec -it testcont bash
+  725  docker container commit mycont  testimg
+  726  docker image ls
+  727  docker ps
+  728  docker container rm -f cf12b7d3907e 4f4506da396e
+  729  docker ps
+  730  docker ps -a
+  731  docker image ls
+  732  docker container run -d --name newcont testimg
+  733  docker ps
+  734  docker container exec -it newcont bash
+  735  df -h /mnt
+  736  cd /mnt
+  737  ls
+  738  rm -rf *
+  739  ls
+  740  las
+  741  ls
+  742  docker image ls
+  743  pwd
+  744  docker save testimg > myimg.tar
+  745  ls -ltrh
+  746  docker image ls
+  747  docker ps -a
+  748  docker container rm -f cbccadb80cf4
+  749  docker image rm testimg nginx
+  750  ls -ltrh
+  751  #docker save testimg > myimg.tar
+  752  docker ps -a
+  753  docker image ls
+  754  docker load < myimg.tar
+  755  docker image ls
+  756  docker container run -it --rm mycont testimg
+  757  docker container run -it --rm --name mycont testimg
+  758  docker container run -it --rm --name mycont testimg  bash
+  759  #docker container commit mycont  testimg
+  760  #docker save testimg > myimg.tar
+  761  #docker load < myimg.tar
+  762  ls -ltr
+  763  cd
+  764  docker info
+  765  docker ps
+  766  docker ps -a
+  767  docker container run -d --name mycont nginx
+  768  docker ps
+  769  docker logs 1fd0d749a7a5
+  770  docker ps
+  771  docker container inspect 1fd0d749a7a5
+  772  cat "/var/lib/docker/containers/1fd0d749a7a512eeac56d935c7b0f08e7723a5a8a13af462c937d3d586e08618/1fd0d749a7a512eeac56d935c7b0f08e7723a5a8a13af462c937d3d586e08618-json.log"
+  773  docker container inspect 1fd0d749a7a5
+  774  docker info
+  775  yum install docker
+  776  yum remove docker
+  777  docker info
+  778  ps -ef | grep docker
+  779  systemctl status docker
+  780  docker ps
+  781  docker image
+  782* docker ps
+  783  docker image ls
+  784  cd docker/
+  785  ls
+  786  vi Dockerfile
+  787  docker build -t newimg:1.0 .
+  788  vi Dockerfile
+  789  mkdir test
+  790  cp Dockerfile ./test/
+  791  ls
+  792   cd test
+  793  ls
+  794  vi Dockerfile
+  795  cat Dockerfile
+  796  ls
+  797  pwd
+  798  docker build -t testimg .
+  799  docker info
+  800  df -hT
+  801  cd /var/lib/docker/
+  802  lsa
+  803  ls
+  804  cd overlay2
+  805  ls
+  806  cd l
+  807  ls
+  808  cd
+  809  ls
+  810  docker ps
+  811  docker network ls
+  812  ls
+  813  cd docker/
+  814  ls
+  815  docker build -t newimg:1.0 .
+  816  docker build --no-cache -t newimg:1.0 .
+  817  crontab -l
+  818  docker network ls
+  819  vi Dockerfile
+  820  docker ps
+  821  docker inspect 1fd0d749a7a5
+  822  docker network ls
+  823  docker container run -f --name cont1 nginx
+  824  docker container run -d --name cont1 nginx
+  825  docker ps
+  826  docker container inspect b649d39c82b4
+  827  docker container run -d --name cont2 nginx
+  828  docker inspect cont2
+  829  ip a s
+  830  docker ps
+  831  docker netwrok create mynet
+  832  docker network create mynet
+  833  docker network ls
+  834  docker netwrok create --driver bridge newnet
+  835  docker netwrok --driver bridge create newnet
+  836  docker network --driver bridge create newnet
+  837  docker network create --driver bridge newnet
+  838  docker network sl
+  839  docker network ls
+  840  #docker network --driver bridge create newnet
+  841  #docker network create mynet
+  842  ip a s
+  843  docker network ls
+  844  docker network rm newnet
+  845  docker info
+  846  ip a s
+  847  vi /etc/docker/daemon.json
+  848  docker network ls
+  849  docker container run -d --net mynet --name cont3 nginx
+  850  docker ps
+  851  docker inspect cont3
+  852  docker ps
+  853  docker network ls
+  854  docker container rm -f mycont
+  855  docker container run -d --net mynet --name customnwcont2 nginx
+  856  docker container rename cont3 customnwcont1
+  857  docker container rename cont1 defaultnwcont1
+  858  docker container rename cont2 defaultnwcont2
+  859  docker ps
+  860  docker container exec -it defaultnwcont1 bash
+  861  docker container exec -it defaultnwcont2 bash
+  862  docker container exec -it defaultnwcont1 bash
+  863  docker container exec -it defaultnwcont2 bash
+  864  docker container exec -it customnwcont1 bash
+  865  docker container exec -it defaultnwcont1 bash
+  866  docker container exec -it customnwcont1 bash
+  867  docker ps
+  868  docker network ls
+  869  docker network attach mynet defaultnwcont1
+  870  docker network connect mynet defaultnwcont1
+  871  docker container inspect defaultnwcont1
+  872  docker container exec -it customnwcont1 bash
+  873  docker container exec -it defaultnwcont1 bash
+  874  docker network ls
+  875  #docker network connect mynet defaultnwcont1
+  876  #docker network connect bridge customnwcont1
+  877  docker ps
+  878  #172.18.0.3 --> nginx app in the container
+  879  hostname -i
+  880  #172.18.0.3 --> nginx app in the container
+  881  #172.31.34.192 --> base machine address
+  882  #docker container run -d --net mynet --name customnwcont2 nginx
+  883  docker network ls
+  884  docker ps
+  885  docker network sl
+  886* docker p
+  887  docker network ls
+  888  docker container run -d --net host --name hostnwcont nginx
+  889  docker ps
+  890  docker container rm -f hostnwcont
+  891  docker ps
+  892  docker container run -d --net host --name hostnwcont nginx
+  893  docker ps
+  894  docker network ls
+  895  docker ps
+  896  docker inspect hostnwcont
+  897  docker container run -d --net host --name hostnwcont1 nginx
+  898  docker ps -a
+  899  docker logs hostnwcont1
+  900  docker ps -a
+  901  docker network ls
+  902  ip a s
+  903  cd /home/salil/docker/
+  904  ls
+  905  vi docker-compose-2.yaml
+  906  vi docker-compose-3.yaml
+  907  docker-compose up -d
+  908  ls
+  909  docker-compose up -d .
+  910  docker-compose up -d
+  911  docker ps
+  912  docker ps -a
+  913  ls
+  914  mkdir test
+  915  mv docker-compose-* ./test
+  916  cd test
+  917  ls
+  918  docker-compose up -d
+  919  docker-compose down
+  920  mv test /root/
+  921  mv docker-compose-8 /root/
+  922  mv docker-compose-* /root/
+  923  ls
+  924  cd ..
+  925  rmdir test
+  926  lcd
+  927  cd
+  928  ls
+  929  docker-compose  up -d
+  930  docker-compose -f docker-compose-2.yaml up -d
+  931  docker ps
+  932  docker network ls
+  933  docker-compose -f docker-compose-2.yaml down
+  934  docker network ls
+  935  cd /home/salil
+  936  ls
+  937  cd  docker/
+  938  ls
+  939  vi docker-stack.yaml
+  940  vi docker-compose-3.yaml
+  941  ls
+  942  cd
+  943  vi docker-compose-
+  944  vi docker-compose-2.yaml
+  945  vi docker-compose-3.yaml
